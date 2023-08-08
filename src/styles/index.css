@@ -10,11 +10,20 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-*{
-    box-sizing: border-box;
-}
-
-body{
-    margin: 0;
-    background-color: lightgray;
-}
+.tic-tac-toe .board-row {
+    display: flex;
+  }
+  
+  .tic-tac-toe .square {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    border: 1px solid black;
+  }
+  
+  .tic-tac-toe .status {
+    margin-bottom: 10px;
+  }
+  
