@@ -10,6 +10,8 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+
 .tic-tac-toe .board-row {
     display: flex;
   }
@@ -26,4 +28,52 @@
   .tic-tac-toe .status {
     margin-bottom: 10px;
   }
-  
+/* Estilos generales para centrar el contenido */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Esto tomará toda la altura de la vista */
+}
+
+/* Ajustes para el formulario */
+.player-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Estilos para las etiquetas de los jugadores */
+.player-form label {
+  font-size: 20px; /* Tamaño de letra más grande */
+}
+
+.player-input {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  font-size: 1.5rem; /* Hace el texto más grande */
+}
+
+.player-input label {
+  display: flex;
+  gap: 10px; /* Espacio entre el nombre del jugador y el input */
+}
+
+input[type="text"] {
+  flex-grow: 1; /* Permite que el input crezca para ocupar el espacio restante */
+}
+
+/* Estilos para X y O */
+.player-x, .player-o {
+  font-weight: bold; 
+  font-size: 24px; /* Tamaño de letra más grande */
+}
+
+
+
+
+

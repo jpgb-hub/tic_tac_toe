@@ -1,24 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import TicTacToe from "./TicTacToe.jsx";
-import PlayerFrom from "./players.jsx"
-
-//include images into your bundle
-
+import PlayerForm from "./players.jsx"; // Parece que hay un error tipográfico aquí. Debería ser PlayerForm
 
 //create your first component
 const Home = () => {
-	return (
-		<div>
-			<>
-			<PlayerFrom />
-			<TicTacToe />
-			</>
+    const [hasGameStarted, setHasGameStarted] = useState(false);
+    const [players, setPlayers] = useState({ player1: '', player2: '' });
 
+    const startGame = (player1, player2) => {
+        setPlayers({ player1, player2 });
+        setHasGameStarted(true);
+    }
 
-		</div>
-
-
-	);
+    return (
+        <div>
+            {hasGameStarted ? <TicTacToe players={players} /> : <PlayerForm onStart={startGame} />}
+        </div>
+    );
 };
 
 export default Home;
+
